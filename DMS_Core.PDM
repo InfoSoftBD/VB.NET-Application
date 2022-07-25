@@ -1,0 +1,185 @@
+[Root]
+Most Recent Package=DMS Core
+
+
+[Package|DMS Core|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=E:\Software\RND\DMS Core\Setup\DMS Core! Setup\VB Setup
+
+[Package|DMS Core|Configure DAO ISAMs]
+Applicable=Yes
+Xbase=Yes
+Excel=Yes
+Exchange=Yes
+Text=Yes
+Jet 2.x=Yes
+Lotus=Yes
+Paradox=Yes
+
+[Package|DMS Core|Configure DAO ODBC]
+JetWorkspace=Yes
+ODBCDirect=Yes
+
+[Package|DMS Core|Files Found]
+
+[Package|DMS Core|Files Released]
+Master.mdb=
+calc.exe=
+
+[Package|DMS Core|Missing Dependency Information]
+C:\WINDOWS\system32\MSEXCH35.DLL=
+C:\Program Files\Common Files\Data Dynamics\ActiveReports 2\actrpt2.dll=
+C:\Program Files\Common Files\System\ado\msado25.tlb=
+C:\WINDOWS\system32\MSSTDFMT.DLL=
+C:\WINDOWS\system32\SkinForm.dll=
+E:\Software\Programming Soft\Personal Soft\Research & Development\DMS Core\calc.exe=
+C:\WINDOWS\system32\msderun.dll=
+
+[Package|DMS Core|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSRDO20.DLL=
+C:\WINDOWS\system32\MSCAL.OCX=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\msdbrptr.dll=
+C:\WINDOWS\system32\msdatgrd.ocx=
+C:\WINDOWS\system32\msbind.dll=
+C:\WINDOWS\system32\msadodc.ocx=
+
+[Package|DMS Core|Files Added]
+calc.exe=
+master.mdb=
+
+[Package|DMS Core|Files Removed]
+
+[Package|DMS Core|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\SkinForm.dll=Yes
+C:\WINDOWS\system32\msadodc.ocx=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\Program Files\Common Files\System\ado\msado25.tlb=Yes
+C:\WINDOWS\system32\msbind.dll=Yes
+C:\WINDOWS\system32\msdatgrd.ocx=Yes
+C:\WINDOWS\system32\msdbrptr.dll=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\MSJET35.DLL=Yes
+C:\WINDOWS\system32\MSJTER35.DLL=Yes
+C:\WINDOWS\system32\MSJINT35.DLL=Yes
+C:\WINDOWS\system32\vbajet32.dll=Yes
+C:\WINDOWS\system32\expsrv.dll=Yes
+C:\WINDOWS\system32\MSRD2X35.DLL=Yes
+C:\WINDOWS\system32\MSREPL35.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\WINDOWS\system32\VB5DB.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\Program Files\Common Files\Data Dynamics\ActiveReports 2\actrpt2.dll=Yes
+C:\WINDOWS\system32\MSCAL.OCX=Yes
+C:\WINDOWS\system32\MSEXCL35.DLL=Yes
+C:\WINDOWS\system32\MSEXCH35.DLL=Yes
+C:\WINDOWS\system32\MSLTUS35.DLL=Yes
+C:\WINDOWS\system32\MSRDO20.DLL=Yes
+C:\WINDOWS\system32\RDOCURS.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\WINDOWS\system32\MSPDOX35.DLL=Yes
+C:\WINDOWS\system32\MSTEXT35.DLL=Yes
+C:\WINDOWS\system32\MSXBSE35.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+E:\Software\RND\DMS Core\DMSCore.exe=Yes
+C:\WINDOWS\system32\msderun.dll=Yes
+C:\WINDOWS\system32\Dao350.dll=Yes
+
+[Package|DMS Core|Configure Registry Files]
+Applicable=No
+
+[Package|DMS Core|Configure Remote Servers]
+Applicable=No
+
+[Package|DMS Core|Install Locations]
+E:\Software\Programming Soft\Personal Soft\Research & Development\DMS Core\DMSCore.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\SkinForm.dll=$(WinSysPath)
+C:\WINDOWS\system32\msadodc.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINDOWS\system32\msbind.dll=$(WinSysPath)
+C:\WINDOWS\system32\msdatgrd.ocx=$(WinSysPath)
+C:\Program Files\Common Files\DESIGNER\MSDERUN.DLL=$(CommonFiles)\designer
+C:\WINDOWS\system32\msdbrptr.dll=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\system32\MSJET35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSJTER35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSJINT35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSRD2X35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSREPL35.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB5DB.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\Program Files\Common Files\Data Dynamics\ActiveReports 2\actrpt2.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCAL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSEXCL35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSEXCH35.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSLTUS35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSRDO20.DLL=$(WinSysPath)
+C:\WINDOWS\system32\RDOCURS.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\WINDOWS\system32\MSPDOX35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSTEXT35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSXBSE35.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+E:\Software\Programming Soft\Personal Soft\Research & Development\DMS Core\calc.exe=$(AppPath)
+E:\Software\Programming Soft\Personal Soft\Research & Development\DMS Core\Master.mdb=$(AppPath)
+E:\Software\RND\DMS Core\DMSCore.exe=$(AppPath)
+C:\WINDOWS\system32\msderun.dll=$(WinSysPath)
+C:\WINDOWS\system32\Dao350.dll=$(MSDAOPath)
+
+[Package|DMS Core|Configure Shared Files]
+Applicable=Yes
+E:\Software\Programming Soft\Personal Soft\Research & Development\DMS Core\DMSCore.exe=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+E:\Software\Programming Soft\Personal Soft\Research & Development\DMS Core\calc.exe=No
+E:\Software\Programming Soft\Personal Soft\Research & Development\DMS Core\Master.mdb=Yes
+E:\Software\RND\DMS Core\DMSCore.exe=No
+
+[Package|DMS Core|Distribution]
+Type=single
+Size=
+Title=DMS Core! Setup
+
+[Package|DMS Core|IconGroups]
+Group0=DMS Core
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|DMS Core|DMS Core]
+Icon1=DMSCore.exe
+Title1=DMS Core
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|DMS Core|Package]
+PackageFolder=E:\Software\RND\DMS Core\Setup\DMS Core! Setup\VB Setup
+ProjectFolder=E:\Software\RND\DMS Core
+ServerSideCab=
+File1=E:\Software\RND\DMS Core\Setup\DMS Core! Setup\VB Setup\setup.exe
+File2=E:\Software\RND\DMS Core\Setup\DMS Core! Setup\VB Setup\Setup.Lst
+File3=E:\Software\RND\DMS Core\Setup\DMS Core! Setup\VB Setup\DMSCore.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
