@@ -1,0 +1,392 @@
+VERSION 5.00
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Begin VB.Form frmRestore 
+   BackColor       =   &H00004080&
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "Data Restore"
+   ClientHeight    =   6165
+   ClientLeft      =   45
+   ClientTop       =   435
+   ClientWidth     =   5430
+   Icon            =   "frmRestore.frx":0000
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
+   ScaleHeight     =   6165
+   ScaleWidth      =   5430
+   StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture5 
+      Appearance      =   0  'Flat
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   3660
+      Left            =   135
+      ScaleHeight     =   3630
+      ScaleWidth      =   5115
+      TabIndex        =   7
+      Top             =   1035
+      Width           =   5145
+      Begin VB.TextBox txtDesti 
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   360
+         Left            =   2400
+         TabIndex        =   11
+         Text            =   "DMS_Backup"
+         Top             =   480
+         Width           =   2520
+      End
+      Begin VB.DriveListBox Drive1 
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   360
+         Left            =   120
+         TabIndex        =   10
+         Top             =   480
+         Width           =   2055
+      End
+      Begin VB.DirListBox Dir1 
+         Height          =   2115
+         Left            =   120
+         TabIndex        =   9
+         Top             =   1320
+         Width           =   2055
+      End
+      Begin VB.ListBox List1 
+         Height          =   2010
+         Left            =   2400
+         TabIndex        =   8
+         Top             =   1320
+         Width           =   2535
+      End
+      Begin VB.Label Label6 
+         AutoSize        =   -1  'True
+         BackColor       =   &H80000013&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Restore Folder:"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   240
+         Left            =   2400
+         TabIndex        =   15
+         Top             =   120
+         Width           =   1335
+      End
+      Begin VB.Label Label3 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Drive Name:"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   240
+         Left            =   120
+         TabIndex        =   14
+         Top             =   120
+         Width           =   1050
+      End
+      Begin VB.Label Label4 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Directory Name:"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   240
+         Left            =   120
+         TabIndex        =   13
+         Top             =   960
+         Width           =   1410
+      End
+      Begin VB.Label Label5 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Backup FIle List:"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   240
+         Left            =   2400
+         TabIndex        =   12
+         Top             =   960
+         Width           =   1470
+      End
+   End
+   Begin VB.PictureBox Picture3 
+      Appearance      =   0  'Flat
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   735
+      Left            =   135
+      ScaleHeight     =   705
+      ScaleWidth      =   5115
+      TabIndex        =   4
+      Top             =   5280
+      Width           =   5145
+      Begin VB.CommandButton Command2 
+         Caption         =   "Close"
+         Height          =   510
+         Left            =   3150
+         TabIndex        =   6
+         Top             =   90
+         Width           =   1545
+      End
+      Begin VB.CommandButton Command1 
+         Caption         =   "Start Restore"
+         Height          =   510
+         Left            =   360
+         TabIndex        =   5
+         Top             =   90
+         Width           =   1545
+      End
+   End
+   Begin VB.PictureBox Picture4 
+      BackColor       =   &H80000003&
+      Height          =   375
+      Left            =   135
+      ScaleHeight     =   315
+      ScaleWidth      =   5085
+      TabIndex        =   2
+      Top             =   4800
+      Width           =   5145
+      Begin MSComctlLib.ProgressBar ProgressBar1 
+         Height          =   330
+         Left            =   0
+         TabIndex        =   3
+         Top             =   0
+         Width           =   5100
+         _ExtentX        =   8996
+         _ExtentY        =   582
+         _Version        =   393216
+         Appearance      =   0
+         Scrolling       =   1
+      End
+   End
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   735
+      Left            =   135
+      ScaleHeight     =   705
+      ScaleWidth      =   5115
+      TabIndex        =   0
+      Top             =   135
+      Width           =   5145
+      Begin VB.Label Label1 
+         Alignment       =   2  'Center
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "RESTORE PROCESS"
+         BeginProperty Font 
+            Name            =   "Cooper Black"
+            Size            =   20.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FFFFFF&
+         Height          =   465
+         Left            =   480
+         TabIndex        =   1
+         Top             =   135
+         Width           =   4140
+      End
+      Begin VB.Image Image3 
+         Height          =   735
+         Left            =   0
+         Picture         =   "frmRestore.frx":0442
+         Stretch         =   -1  'True
+         Top             =   0
+         Width           =   5205
+      End
+   End
+End
+Attribute VB_Name = "frmRestore"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Dim prog As Integer
+Dim prgMax As Integer
+Dim strCurrentFile As String
+Dim strPattern As String
+Dim strSourceFile As String
+Private Sub CopyOrMoveFiles(pstrSourcePath As String, pstrTargetPath As String, pstrExtension As String, pstrCopyOrMoveCode As String)
+
+If Right$(pstrSourcePath, 1) <> "\" Then
+pstrSourcePath = pstrSourcePath & "\"
+End If
+
+If Right$(pstrTargetPath, 1) <> "\" Then
+pstrTargetPath = pstrTargetPath & "\"
+End If
+
+strPattern = pstrSourcePath & "*." & pstrExtension
+strCurrentFile = Dir$(strPattern)
+
+Do Until strCurrentFile = ""
+
+    strSourceFile = pstrSourcePath & strCurrentFile
+    strTargetFile = pstrTargetPath & strCurrentFile
+
+    FileCopy strSourceFile, strTargetFile
+    List1.AddItem strCurrentFile + " Copied."
+    List1.Refresh
+    
+    prog = prog + 1
+    ProgressBar1.Min = 0
+    ProgressBar1.Max = prgMax
+    ProgressBar1.Value = prog
+    strCurrentFile = Dir$()
+Loop
+
+If pstrCopyOrMoveCode = "M" Then
+    Kill strPattern
+End If
+
+End Sub
+Private Sub CountFiles(pstrSourcePath As String, pstrTargetPath As String, pstrExtension As String, pstrCopyOrMoveCode As String)
+If Right$(pstrSourcePath, 1) <> "\" Then
+    pstrSourcePath = pstrSourcePath & "\"
+End If
+strPattern = pstrSourcePath & "*." & pstrExtension
+strCurrentFile = Dir$(strPattern)
+
+Do Until strCurrentFile = ""
+
+strSourceFile = pstrSourcePath & strCurrentFile
+
+List1.AddItem strCurrentFile + " Copied."
+prgMax = prgMax + 1
+strCurrentFile = Dir$()
+Loop
+End Sub
+Private Sub Command1_Click()
+On Error GoTo cmdTryIt_Click_Error
+    conn.Close
+    List1.Clear
+    prog = 0
+    prgMax = 0
+    ProgressBar1.Value = 0
+
+    Dim Location As String
+    Dim Photo As String
+    Dim Thumb As String
+    Dim Vedio As String
+    Dim Sound As String
+        
+        Location = Dir1.Path
+        Photo = App.Path + "\Photo"
+        Thumb = App.Path + "\Thumb"
+        Vedio = App.Path + "\Vedio"
+        'Sound = Location + "\Sound"
+        
+
+    If Dir$(Location, vbDirectory) = "" Then
+       MsgBox "Restore Location Empty!", vbInformation, "Restore error!"
+       conn.Open cnStr
+       Else
+        On Error Resume Next
+            CountFiles Location, App.Path, "*.*", "C"
+            CopyOrMoveFiles Location, App.Path, "*.*", "C"
+            List1.AddItem strSourceFile
+            
+            
+            If Dir$(Photo, vbDirectory) = "" Then
+             MkDir (Photo)
+             CountFiles Location + "\Photo", Photo, "*.*", "C"
+             CopyOrMoveFiles Location + "\Photo", Photo, "*.*", "C"
+             List1.AddItem strSourceFile
+            Else
+             CountFiles Location + "\Photo", Photo, "*.*", "C"
+             CopyOrMoveFiles Location + "\Photo", Photo, "*.*", "C"
+             List1.AddItem strSourceFile
+            End If
+    
+            If Dir$(Thumb, vbDirectory) = "" Then
+             MkDir (Thumb)
+             CountFiles Location + "\Thumb", Thumb, "*.*", "C"
+             CopyOrMoveFiles Location + "\Thumb", Thumb, "*.*", "C"
+             List1.AddItem strSourceFile
+            Else
+             CountFiles Location + "\Thumb", Thumb, "*.*", "C"
+             CopyOrMoveFiles Location + "\Thumb", Thumb, "*.*", "C"
+             List1.AddItem strSourceFile
+            End If
+       
+            If Dir$(Vedio, vbDirectory) = "" Then
+             MkDir (Vedio)
+             CountFiles Location + "\Vedio", Vedio, "*.*", "C"
+             CopyOrMoveFiles Location + "\Vedio", Vedio, "*.*", "C"
+             List1.AddItem strSourceFile
+            Else
+             CountFiles Location + "\Vedio", Vedio, "*.*", "C"
+             CopyOrMoveFiles Location + "\Vedio", Vedio, "*.*", "C"
+             List1.AddItem strSourceFile
+            End If
+       
+    conn.Open cnStr
+    MsgBox "Restore Successfully Completed! " & prgMax & " No.s File copied.", vbInformation, "Successful!"
+
+Exit Sub
+
+cmdTryIt_Click_Error:
+
+MsgBox "The following error has occurred:" & vbNewLine & "Error # " & Err.Number & " - " & Err.Description, vbCritical, "File System Commands Demo - Error"
+
+End If
+End Sub
+Private Sub Command2_Click()
+Unload Me
+End Sub
+Private Sub Dir1_Change()
+txtDesti.Text = Dir1.Path
+End Sub
+Private Sub Drive1_Change()
+Dir1.Path = Drive1.Drive
+End Sub
+Private Sub Form_Load()
+txtDesti.Text = Dir1.Path
+End Sub
